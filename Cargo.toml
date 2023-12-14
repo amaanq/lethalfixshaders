@@ -1,6 +1,6 @@
 [package]
 name = "lethalfixshaders"
-version = "0.1.0"
+version = "0.1.1"
 edition = "2021"
 description = "Fixes shader names and sorts materials into their shader path for Lethal Company"
 authors = ["Amaan Qureshi <amaanq12@gmail.com>"]

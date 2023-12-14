@@ -59,12 +59,12 @@ pub async fn copy_materials_to_shader(
         let output_path = output_path.join(file_name);
         let output_path = output_path.as_path();
 
-        tokio::fs::copy(&path, output_path).await?;
+        tokio::fs::rename(&path, output_path).await?;
 
         let meta_path = path.with_extension("mat.meta");
         let output_meta_path = output_path.with_extension("mat.meta");
 
-        tokio::fs::copy(&meta_path, &output_meta_path).await?;
+        tokio::fs::rename(&meta_path, &output_meta_path).await?;
     }
 
     Ok(())

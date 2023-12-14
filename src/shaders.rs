@@ -66,7 +66,7 @@ async fn add_suffix(input_path: &Path, suffix: &str) -> anyhow::Result<()> {
         .to_owned();
     shader_name = format!("{shader_name}{suffix}");
 
-    let mut output = format!("Shader \"{shader_name}\"");
+    let mut output = format!("Shader \"{shader_name}\" {{");
 
     for line in lines {
         output = format!("{output}\n{line}");
