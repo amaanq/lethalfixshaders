@@ -1,0 +1,26 @@
+[package]
+name = "lethalfixshaders"
+version = "0.1.0"
+edition = "2021"
+description = "Fixes shader names and sorts materials into their shader path for Lethal Company"
+authors = ["Amaan Qureshi <amaanq12@gmail.com>"]
+license = "MIT"
+repository = "https://github.com/amaanq/lethalfixshaders"
+readme = "README.md"
+keywords = ["lethal", "company", "shader", "material"]
+categories = ["game", "tools"]
+homepage = "https://github.com/amaanq/lethalfixshaders"
+
+[dependencies]
+anstyle = "1.0.4"
+anyhow = "1.0.75"
+clap = { version = "4.4.11", features = ["derive", "unstable-styles"] }
+tokio = { version = "1.35.0", features = [
+	"fs",
+	"macros",
+	"rt",
+	"rt-multi-thread",
+] }
+
+[dev-dependencies]
+indoc = "2.0.4"
